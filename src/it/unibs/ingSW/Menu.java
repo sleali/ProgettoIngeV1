@@ -18,6 +18,7 @@ public class Menu
 				break;
 				default:
 					System.out.println("Uscita in corso...");
+					break;
 			}
 		} 
 		while (scelta != 0);
