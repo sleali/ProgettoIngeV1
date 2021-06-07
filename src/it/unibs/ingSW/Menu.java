@@ -1,10 +1,13 @@
 package it.unibs.ingSW;
 
+import java.io.File;
+
 import it.unibs.fp.mylib.*;
 
 public class Menu 
 {
 	public static void main(String[] args) throws Exception{
+		checkDirectory();
 		int scelta = 0;
 		do 
 		{
@@ -22,6 +25,18 @@ public class Menu
 			}
 		} 
 		while (scelta != 0);
+	}
+	
+	private static void checkDirectory() {
+		File directory = new File("./salvataggi");
+		File directoryN = new File("./salvataggi/retiN");
+		
+		if (!directory.isDirectory()) {
+			directory.mkdir();
+			if(!directoryN.isDirectory()) {
+				directoryN.mkdir();
+			}
+		}
 	}
 	
 	public static void reti(){
